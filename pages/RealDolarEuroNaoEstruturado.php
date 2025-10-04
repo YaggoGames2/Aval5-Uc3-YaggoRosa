@@ -17,7 +17,7 @@ if ($valor === false || $valor <= 0) {
     $mensagem = "<p>R$ $valor = €" . number_format($resultado, 2, ',', '.') . "</p>";
 } elseif ($moeda === "yuan") {
     $resultado = $valor / $yuan;
-    $mensagem = "<p>R$ $valor = ¥" . number_format($resultado, 2, ',', '.') . "</p>";
+    $mensagem = "<p>R$ $valor = " . number_format($resultado, 2, ',', '.') . "</p>";
 } else {
     if ($moeda !== null) {
         $mensagem = "<p> Moeda inválida!</p>";
