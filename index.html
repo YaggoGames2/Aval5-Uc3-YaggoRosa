@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Conversão</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <form class="form" action="./pages/RealDolarEuroNaoEstruturado.php" method="post">
+            <p class="form__text"> Qual sua conversão hoje?</p>
+
+            <div class="form__value">
+                <input type="number" name="valor" id="bloco_one" step="0.01" required>
+            </div>
+
+            <div class="form__money">
+                <select class="select" id="form__money-option" name="moeda" required>
+                    <option value="">Selecione Moeda</option>
+                    <option value="dolar">Dólar $</option>
+                    <option value="euro">Euro €</option>
+                    <option value="yuan">Yuan ¥</option>
+                </select>
+            </div>
+
+            <button type="submit" class="form__button">Converter</button>
+            <P id="form__resultado"> Resultado da conversão aqui</P>
+        </form>
+    </div>
+</body>
+
+</html
