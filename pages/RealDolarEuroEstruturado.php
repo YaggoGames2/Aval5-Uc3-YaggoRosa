@@ -13,8 +13,18 @@ function validarEntradas($valor, $moeda) {
 return true;
 }
 
-function converterDolar($valor, $cotacao) {
-    $resultado = $valor / $cotacao;
+function converterDolar($valor, $moeda) {
+    $resultado = $valor / $moeda;
     return "R$ $valor = $ " . number_format($resultado, 2, ',', '.');
+}
+
+function converterEuro($valor, $moeda) {
+    $resultado = $valor / $moeda;
+    return "R$ $valor = €" . number_format($resultado, 2, ',', '.');
+}
+
+function converterYuan( $valor, $moeda) {   
+    $resultado = $valor / $moeda;
+    return "R$ $valor = ¥". number_format($resultado, 2,',', '.');
 }
 ?>
