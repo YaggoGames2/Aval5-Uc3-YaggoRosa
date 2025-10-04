@@ -13,4 +13,8 @@ function validarEntradas($valor, $moeda) {
 return true;
 }
 
+function converterDolar($valor, $cotacao) {
+    $resultado = $valor / $cotacao;
+    return "R$ $valor = $ " . number_format($resultado, 2, ',', '.');
+}
 ?>
