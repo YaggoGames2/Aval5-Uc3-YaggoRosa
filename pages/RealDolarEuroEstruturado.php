@@ -27,4 +27,8 @@ function converterYuan( $valor, $moeda) {
     $resultado = $valor / $moeda;
     return "R$ $valor = ¥". number_format($resultado, 2,',', '.');
 }
+
+function exibirMensagem($mensagem){
+ return $mensagem;
+}
 ?>
