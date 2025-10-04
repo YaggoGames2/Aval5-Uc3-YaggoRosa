@@ -31,4 +31,45 @@ function converterYuan( $valor, $moeda) {
 function exibirMensagem($mensagem){
  return $mensagem;
 }
+
+$mensagem = "";
+$dolar = 5.34;
+$euro = 6.26;
+$yuan = 0.75;
+
+if (isset($_POST["valor"]) && isset($_POST["moeda"])) {
+$valor = filter_input(INPUT_POST, 'valor', FILTER_VALIDATE_FLOAT);
+$moeda = filter_input(INPUT_POST, 'moeda', FILTER_SANITIZE_STRING);
+
+$validacao = validarEntradas($valor, $moeda);
+
+if ($validacao === true) {
+        if ($moeda === "dolar") {
+            $mensagem = converterDolar($valor, $dolar);
+        } elseif ($moeda === "euro") {
+            $mensagem = converterEuro($valor, $euro);
+        } elseif ($moeda === "yuan") {
+            $mensagem = converterYuan($valor, $yuan);
+        }
+    } else {
+        $mensagem = exibirMensagem($validacao);
+    }
+} 
+
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/style2.css">
+    <title>Conversão</title>
+</head>
+<body>
+    <div class="mensagem"> 
+        <?php echo $mensagem; ?>
+    </div>
+   
+</body>
+</html>

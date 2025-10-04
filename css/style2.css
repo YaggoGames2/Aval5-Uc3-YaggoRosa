@@ -1,0 +1,42 @@
+/* php */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, hsl(278, 57%, 38%));
+    color: #fff;
+}
+
+
+/* Container da mensagem */
+
+.mensagem {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid hsl(278, 100%, 60%);
+    padding: 25px 40px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(162, 0, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    max-width: 400px;
+}
+
+
+/* Efeito hover */
+
+.mensagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(162, 0, 255, 0.8);
+}
